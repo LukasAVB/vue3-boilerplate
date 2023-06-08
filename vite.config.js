@@ -1,5 +1,9 @@
 import { defineConfig, loadEnv } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import Vue from '@vitejs/plugin-vue'
+// Icons
+import Components from "unplugin-vue-components/vite"
+import Icons from "unplugin-icons/vite"
+import IconsResolver from "unplugin-icons/resolver"
 
 import path from 'path' 
 
@@ -9,7 +13,15 @@ export default defineConfig(({ mode }) => {
 
 	return {
 		base: env.BASE_URL,
-		plugins: [vue()],
+		plugins: [
+			Vue(),
+			Components({
+				resolvers: [IconsResolver({ prefix: "" })]
+			}),
+			Icons({
+				autoInstall: true
+			})
+		],
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, 'src'),
