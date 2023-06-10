@@ -5,6 +5,7 @@ This template should help get you started developing with Vue 3 in Vite. The tem
 # Technologies Used
 - Framework: [Vue3](https://vuejs.org/)
 - Tooling: [Vite](https://vitejs.dev/)
+- State Management: [Pinia](https://pinia.vuejs.org/)
 - Theme: [Tailwind CSS](https://tailwindcss.com/)
 - Icons: [Unplugin Icons](https://github.com/antfu/unplugin-icons)
 - Animations: [Animate.css](https://animate.style/) + [GSAP](https://greensock.com/gsap/)
