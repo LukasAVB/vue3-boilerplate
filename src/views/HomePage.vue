@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<h1>HOME PAGE</h1>
+		<h1>VUE 3 BOILERPLATE</h1>
 	</div>
 </template>
 
