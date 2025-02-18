@@ -1,7 +1,5 @@
 <template>
-	<div>
-		<main>
-			<router-view></router-view>
-		</main>
-	</div>
+  <main>
+    <RouterView />
+  </main>
 </template>
