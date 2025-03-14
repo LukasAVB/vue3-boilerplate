@@ -4,12 +4,17 @@ import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 import router from './router'
+import { updateFavicon } from './utils/updateFavicon'
 
 const pinia = createPinia()
 
-document.title = import.meta.env.VITE_SITE_TITLE || 'Title';
+// Set the document title dynamically
+document.title = import.meta.env.VITE_SITE_TITLE || 'Title'
 
-const app = createApp (App)
+// Update favicon
+updateFavicon()
+
+const app = createApp(App)
 
 app.use(router)
 app.use(pinia)
