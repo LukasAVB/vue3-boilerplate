@@ -1,6 +1,49 @@
+
 @import './tailwind.css';
 
-/* @import './_fontface.css';
+@import './_fontface.css';
 @import './_variables.css';
 @import './_global.css';
-@import './_animations.css'; */
+
+@import './_animations.css';
+
+.wrapper {
+	position: relative !important;
+}
+
+.container {
+	margin: 0 auto !important;
+	width: 100% !important;
+	max-width: var(--max-container-width) !important;
+}
+
+.disable-scroll { overflow: hidden !important; }
+
+.sticky-navbar { filter: drop-shadow(var(--shadow)); }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.page-link.active::after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -25px;
+	width: 50px;
+	height: 4px;
+	background-color: var(--color-accent);
+	border-top-left-radius: 2px;
+	border-top-right-radius: 2px;
+}
+
+a:hover { color: var(--color-accent); }

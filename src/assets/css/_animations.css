@@ -1,0 +1,32 @@
+
+/* 
+	* Transitions 
+*/
+/* Fade */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity var(--animation-speed);
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide Right */
+.slide-right-enter-active, .slide-right-leave-active {
+  transition: transform var(--animation-speed);
+}
+.slide-right-enter, .slide-right-leave-to {
+  transform: translateX(-100%)
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Spin */
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
