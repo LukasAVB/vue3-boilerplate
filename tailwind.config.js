@@ -1,5 +1,11 @@
 module.exports = {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx,vue}",
+  ],
 	important: true,
+  plugins: [],
+  variants: {},
 	theme: {
 		extend: {
       fontFamily: {
@@ -125,10 +131,5 @@ module.exports = {
 				'default': 'var(--border-radius)'
 			}
 		},
-	},
-  variants: {},
-	content: [
-		'./index.html', 
-		'./src/**/*.{vue,js,ts,jsx,tsx}',
-	]
+	}
 }

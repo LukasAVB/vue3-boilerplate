@@ -1,33 +1,16 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
-import { createPinia } from 'pinia'
-// Styling
 import './assets/css/main.css'
-// App
+
+import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 import App from './App.vue'
-// Pages
-import HomePage from './views/HomePage.vue'
+import router from './router'
 
-const router = createRouter({
-	history: createWebHistory(import.meta.env.VITE_BASE_URL),
-	routes: [
-		{
-			path: '/',
-			name: 'Home',
-			component: HomePage,
-			meta: {
-				title: import.meta.env.VITE_SITE_TITLE
-			}
-		},
-	]
-})
+const pinia = createPinia()
 
-router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || import.meta.env.VITE_SITE_TITLE + ' | ' + to.name
-  next();
-})
+document.title = import.meta.env.VITE_SITE_TITLE || 'Title';
 
-createApp(App)
-	.use(createPinia())
-	.use(router)
-	.mount('#app')
+const app = createApp (App)
+
+app.use(router)
+app.use(pinia)
+app.mount('#app')

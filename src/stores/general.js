@@ -1,0 +1,1 @@
+export { usegeneralStore } from './general.store'

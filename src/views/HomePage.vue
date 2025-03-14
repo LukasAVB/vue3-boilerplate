@@ -1,12 +1,9 @@
+<!-- src/views/ReportingDashboard.vue -->
 <template>
-	<div>
-		<h1>VUE 3 BOILERPLATE</h1>
-	</div>
+  <div class="flex flex-col items-center justify-center p-6">
+    Vue 3 Boilerplate
+  </div>
 </template>
 
 <script setup>
 </script>
-
-<style>
-
-</style>

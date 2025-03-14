@@ -9,9 +9,6 @@
 	--color-gray-004: #CACACA;
 	--color-gray-005: #898989;
 	--color-black: #000000;
-	--color-primary: pink;
-	--color-secondary: #violet;
-	--color-accnet: red;
 
 	/* Breakpoints */
 	--breakpoint-mobile: 516px;
@@ -63,8 +60,8 @@
 	--animation-speed: 0.25s;
 
 	/* Colors */
-	--primary-bg-color: var(--color-primary)
-	--primary-text-color: var(--color-secondary)
+	--primary-bgcolor: var(--color-white);
+	--primary-textcolor: var(--color-secondary);
 
 
 	/* Shadows */
