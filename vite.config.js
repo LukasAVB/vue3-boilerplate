@@ -7,17 +7,18 @@ import Icons from 'unplugin-icons/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.VITE_BASE_URL || '/',
   plugins: [
     vue(),
     vueDevTools(),
     Icons({
       compiler: 'vue3',
       autoInstall: true
-    })
+    }),
   ],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-  },
+  }
 })

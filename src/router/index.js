@@ -1,15 +1,21 @@
-import { createWebHistory, createRouter } from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
 
 // Routes
 import {
-  ReportingDashboardPage
+  HomePage
 } from '@/views'
 
 const routes = [
-    { path: '/', component: ReportingDashboardPage },
+  { 
+    path: '/', 
+    name: 'Home',
+    component: HomePage
+  },
 ]
 
-export const router = createRouter({
-    history: createWebHistory(),
-    routes,
+const router = createRouter({
+  history: createWebHistory(import.meta.env.VITE_BASE_URL),
+  routes,
 })
+
+export default router

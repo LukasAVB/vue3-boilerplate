@@ -1,2 +1,2 @@
 
-export { default as ReportingDashboardPage } from './ReportingDashboardPage.vue'
+export { default as HomePage } from './HomePage.vue'
